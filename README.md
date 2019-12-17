@@ -35,45 +35,20 @@ Rock sample locations and field lithological observations were accessed from a p
 | -------------------- | -------------------------------------------------------------- | -------------- | --------------------------- |
 | vData_field_CONF.gdb | [ArcGIS 10.2](https://resources.arcgis.com/en/help/main/10.2/) | SAMPLE_wc_LIVE | NAD83 / Yukon Albers        |
 
-# Data processing
+# Data preparation
 
 ## Format conversion
 
-| Old dataset                         | New dataset                             | Type                                                   |
-| ----------------------------------- | --------------------------------------- | ------------------------------------------------------ |
-| Witold_samples_no_info.xlsx         | ../dtWorking/Witold_samples_no_info.csv | Comma-separated values                                 |
-| vData_field_CONF.gdb/SAMPLE_wc_LIVE | ../dtWorking/SAMPLE_wc_LIVE.gpkg        | [GeoPackage](https://en.wikipedia.org/wiki/GeoPackage) |
+| Old dataset                         | New (working) dataset      |
+| ----------------------------------- | -------------------------- |
+| Witold_samples_no_info.xlsx         | Witold_samples_no_info.csv |
+| vData_field_CONF.gdb/SAMPLE_wc_LIVE | Rx09-11_repo01.gpkg        |
 
-## Coordinate Reference Systems (CRS) conversion
+## Working datasets: Geospatial
 
-| Dataset        | New CRS                                                                                                                                 | Conversion utility                 |
-| -------------- | --------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------- |
-| SAMPLE_wc_LIVE | [EPSG:4326 - WGS 84 - Geographic](https://docs.qgis.org/3.4/en/docs/user_manual/working_with_projections/working_with_projections.html) | [QGIS](https://qgis.org/) v.3.10.1 |
-
-CRS definition: EPSG:4326 - WGS 84 - Geographic (source: QGIS v.3.10.1)
-
-    WGS 84
-    WKT
-    GEODCRS["WGS 84",
-        DATUM["World Geodetic System 1984",
-            ELLIPSOID["WGS 84",6378137,298.257223563,
-                LENGTHUNIT["metre",1]]],
-        PRIMEM["Greenwich",0,
-            ANGLEUNIT["degree",0.0174532925199433]],
-        CS[ellipsoidal,2],
-            AXIS["geodetic latitude (Lat)",north,
-                ORDER[1],
-                ANGLEUNIT["degree",0.0174532925199433]],
-            AXIS["geodetic longitude (Lon)",east,
-                ORDER[2],
-                ANGLEUNIT["degree",0.0174532925199433]],
-        AREA["World"],
-        BBOX[-90,-180,90,180],
-        ID["EPSG",4326]]
-    Proj4
-    +proj=longlat +datum=WGS84 +no_defs
-    Extent
-    -180.00, -90.00, 180.00, 90.00
+| Database            | Type                                                   | Dataset        | Coordinate Reference System |
+| ------------------- | ------------------------------------------------------ | -------------- | --------------------------- |
+| Rx09-11_repo01.gpkg | [GeoPackage](https://en.wikipedia.org/wiki/GeoPackage) | SAMPLE_wc_LIVE | NAD83 / Yukon Albers        |
 
 ## Data cleaning
 
