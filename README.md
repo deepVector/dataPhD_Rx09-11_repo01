@@ -17,3 +17,20 @@ This project and its associated output dataset (file _CiolkiewiczW_dataPhD_Rx09-
 # Recommended citation
 
 Ciolkiewicz, W. (2019), dataPhD_Rx09-11_repo01: Geolocated sample information for rock specimens collected between 2009 and 2011 in west-central Yukon - Data repository 1, online: <https://github.com/deepVector/dataPhD_Rx09-11_repo01>
+
+# Source data
+
+## Witold_samples_no_info.xlsx
+
+The file _Witold_samples_no_info.xlsx_ was received from Jim Ryan (GSC) on 13NOV2019.  The file defines the subset of rock sample numbers from the Ph.D. research of Witold Ciolkiewicz of interest to the GSC and the scope of the requested information, including:
+
+| Sample ID | Source | Sampler | Zone | Latitude | Longitude | Datum | UTM Easting | UTM Northing | Elevation | Loc_Desc |
+| --------- | ------ | ------- | ---- | -------- | --------- | ----- | ----------- | ------------ | --------- | -------- |
+
+## Rock sample information from 2009-2011 field research in west-central Yukon
+
+Rock sample locations and field lithological observations were accessed from a proprietary internal database.
+
+| Database             | Type                                                           | Dataset        | Coordinate Reference System |
+| -------------------- | -------------------------------------------------------------- | -------------- | --------------------------- |
+| vData_field_CONF.gdb | [ArcGIS 10.2](https://resources.arcgis.com/en/help/main/10.2/) | SAMPLE_wc_LIVE | NAD83 / Yukon Albers        |
