@@ -9,3 +9,7 @@ This data repository contains a subset of geolocated geoscientific observations 
 The observations were collected during field research that was carried out as part of Ph.D. studies conducted by Witold Ciolkiewicz at the UBC Mineral Deposit Research Unit ([MDRU](https://www.mdru.ubc.ca)) under the supervision of [James Mortensen](https://www.eoas.ubc.ca/people/jamesmortensen) (MDRU-UBC) and [Craig Hart](https://www.linkedin.com/in/craig-hart-a2132419) (MDRU-UBC), with external supervision by Jim Ryan (GSC).
 
 The Ph.D. research was supported by the Geological Survey of Canada ([GSC](https://www.nrcan.gc.ca/science-data/research-centres-labs/geological-survey-canada)), the Yukon Geological Survey ([YGS](https://yukon.ca/en/science-and-natural-resources/geology)) and the Natural Sciences and Engineering Research Council of Canada ([NSERC](https://www.nserc-crsng.gc.ca)), through a grant to the [Yukon Gold Project](http://old.mdru.ubc.ca/home/research/yg/yg.php).
+
+# License
+
+This project and its associated output dataset (file _CiolkiewiczW_dataPhD_Rx09-11_repo01.csv_) are licensed under the terms of the Creative Commons Attribution Non Commercial No Derivatives 4.0 International (CC-BY-NC-ND-4.0; see _LICENSE.md_).
