@@ -13,3 +13,7 @@ The Ph.D. research was supported by the Geological Survey of Canada ([GSC](https
 # License
 
 This project and its associated output dataset (file _CiolkiewiczW_dataPhD_Rx09-11_repo01.csv_) are licensed under the terms of the Creative Commons Attribution Non Commercial No Derivatives 4.0 International (CC-BY-NC-ND-4.0; see _LICENSE.md_).
+
+# Recommended citation
+
+Ciolkiewicz, W. (2019), dataPhD_Rx09-11_repo01: Geolocated sample information for rock specimens collected between 2009 and 2011 in west-central Yukon - Data repository 1, online: <https://github.com/deepVector/dataPhD_Rx09-11_repo01>
