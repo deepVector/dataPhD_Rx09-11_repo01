@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Data preparation."""
+"""Project configuration."""
 
 import os
 
