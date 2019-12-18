@@ -22,36 +22,45 @@ Ciolkiewicz, W. (2019), dataPhD_Rx09-11_repo01: Geolocated sample information fo
 
 ## Witold_samples_no_info.xlsx
 
-The file _Witold_samples_no_info.xlsx_ was received from Jim Ryan (GSC) on 13NOV2019.  The file defines the subset of rock sample numbers from the Ph.D. research of Witold Ciolkiewicz of interest to the GSC and the scope of the requested information, including:
+The file _Witold_samples_no_info.xlsx_ was received from Jim Ryan (GSC) on 13NOV2019.  The file (1) contains a list of rock sample numbers (_n_=170) from the Ph.D. research of Witold Ciolkiewicz of interest to the Geological Survey of Canada and (2) specifies the scope of the requested information, as follows:
 
-| Sample ID | Source | Sampler | Zone | Latitude | Longitude | Datum | UTM Easting | UTM Northing | Elevation | Loc_Desc |
-| --------- | ------ | ------- | ---- | -------- | --------- | ----- | ----------- | ------------ | --------- | -------- |
+| Sample ID | Source | Sampler | Zone | Latitude | Longitude | Datum | UTM Easting | UTM Northing | Elevation | Loc_Desc\* |
+| --------- | ------ | ------- | ---- | -------- | --------- | ----- | ----------- | ------------ | --------- | ---------- |
+
+\* It is assumed that "Loc_Desc" refers to a lithological sample description.
 
 ## Rock sample information from 2009-2011 field research in west-central Yukon
 
-Rock sample locations and field lithological observations were accessed from a proprietary internal database.
+Rock sample locations and field lithological observations were accessed from proprietary project datasets:
 
-| Database             | Type                                                           | Dataset        | Coordinate Reference System |
-| -------------------- | -------------------------------------------------------------- | -------------- | --------------------------- |
-| vData_field_CONF.gdb | [ArcGIS 10.2](https://resources.arcgis.com/en/help/main/10.2/) | SAMPLE_wc_LIVE | NAD83 / Yukon Albers        |
+| Database             | Type                                                           | Dataset          | Data scope                                                       |
+| -------------------- | -------------------------------------------------------------- | ---------------- | ---------------------------------------------------------------- |
+| vData_field_CONF.gdb | [ArcGIS 10.2](https://resources.arcgis.com/en/help/main/10.2/) | EARTHMAT_wc_LIVE | LITHGROUP\*, LITHDETAIL\*                                        |
+| vData_field_CONF.gdb | [ArcGIS 10.2](https://resources.arcgis.com/en/help/main/10.2/) | SAMPLE_wc_LIVE   | SAMPLEID                                                         |
+| vData_field_CONF.gdb | [ArcGIS 10.2](https://resources.arcgis.com/en/help/main/10.2/) | STATION_wc_LIVE  | Latitude, Longitude, Datum, UTM Easting, UTM Northing, Elevation |
+
+\* It is assumed that the scope of the information provided by the "LITHGROUP" and "LITHDETAIL" data items corresponds to the requested "Loc_Desc". The two data items follow the field data collection scheme of Shimamura, Williams and Buller (2008) --- for a detailed description, please see the [Geological Survey of Canada Open File 5912](https://doi.org/10.4095/226214).
 
 # Data preparation
 
 ## Format conversion
 
-| Old dataset                         | New (working) dataset      |
-| ----------------------------------- | -------------------------- |
-| Witold_samples_no_info.xlsx         | Witold_samples_no_info.csv |
-| vData_field_CONF.gdb/SAMPLE_wc_LIVE | Rx09-11_repo01.gpkg        |
+| Old dataset                 | New (working) dataset      |
+| --------------------------- | -------------------------- |
+| Witold_samples_no_info.xlsx | Witold_samples_no_info.csv |
 
-## Working datasets: Geospatial
+## Data pre-processing
 
-| Database            | Type                                                   | Dataset        | Coordinate Reference System |
-| ------------------- | ------------------------------------------------------ | -------------- | --------------------------- |
-| Rx09-11_repo01.gpkg | [GeoPackage](https://en.wikipedia.org/wiki/GeoPackage) | SAMPLE_wc_LIVE | NAD83 / Yukon Albers        |
+### Witold_samples_no_info.csv
 
-## Data cleaning
-
-1.  Sample numbers in the file _Witold_samples_no_info.csv_ were reviewed, errors were manually cleaned.
+1.  Sample numbers were reviewed, errors were manually cleaned.
 
     1.1.  E.g. from an incorrect sample number _09WC**1**053A1_ to the correct _09WC**I**053A1_.
+
+2.  Duplicate sample IDs (47%) were removed.
+
+    2.1. Script: _data_prep.py_
+
+# Bibliography
+
+Shimamura, K., Williams, S.P., Buller, G., 2008, _GanFeld user guide: a map-based field data capture system for geologists_, Geological Survey of Canada, Open File 5912, 2008, 90 pages; 1 CD-ROM, <https://doi.org/10.4095/226214> (Open Access)
