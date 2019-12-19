@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Merge a range of data items from multiple tabular datasets."""
+"""Merge a range of data items from multiple geospatial datasets."""
 
 from config import DATA_WORKING_DIR
 
