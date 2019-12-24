@@ -81,9 +81,11 @@ Rock sample locations and field lithological observations were accessed from pro
     3.1.  Example:
 
     Sample number as provided (missing part of the suffix):
+
         09WCI043A1
 
     Corrected sample number:
+
         09WCI043A01
 
 ## Data fusion
